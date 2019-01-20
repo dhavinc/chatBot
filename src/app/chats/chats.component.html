@@ -1,0 +1,3 @@
+<div class="chats" #chat>
+  <span *ngFor="let message of messages" [ngClass]="{'is-user-msg': message.sentBy === 'user'}" class="app-chat">{{message.message}}</span>
+</div>

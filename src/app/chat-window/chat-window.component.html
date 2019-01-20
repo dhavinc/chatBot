@@ -1,0 +1,7 @@
+<div class="chat-window">
+  <app-chats></app-chats>
+  <form class="message" (ngSubmit)="onSend()" [formGroup]="chatForm">
+    <input placeholder="Write a message" class="message-input" type="text" formControlName="msgText">
+    <button style="display: none;" type="submit">Send</button>
+  </form>
+</div>
