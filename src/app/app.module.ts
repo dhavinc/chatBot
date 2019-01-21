@@ -9,6 +9,7 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { HttpModule } from '@angular/http';
 import { MainComponent } from './main/main.component';
 import { ChatsComponent } from './chats/chats.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChatsComponent } from './chats/chats.component';
     EmptyComponent,
     ChatWindowComponent,
     MainComponent,
-    ChatsComponent
+    ChatsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

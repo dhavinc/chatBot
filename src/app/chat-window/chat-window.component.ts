@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { ChatService } from '../chat.service';
 import { Message } from '../shared/message.model';
@@ -16,7 +16,7 @@ export class ChatWindowComponent implements OnInit {
 
   ngOnInit() {
     this.chatForm = new FormGroup({
-      'msgText': new FormControl(null)
+      'msgText': new FormControl(null, Validators.required)
     });
   }
   onSend() {

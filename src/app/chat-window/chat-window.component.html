@@ -2,6 +2,7 @@
   <app-chats></app-chats>
   <form class="message" (ngSubmit)="onSend()" [formGroup]="chatForm">
     <input placeholder="Write a message" class="message-input" type="text" formControlName="msgText">
-    <button style="display: none;" type="submit">Send</button>
+    <button style="display: none;" [disabled]="!chatForm.valid" type="submit">Send</button>
+    <span class="error" *ngIf="!chatForm.valid && chatForm.touched">Type something</span>
   </form>
 </div>
