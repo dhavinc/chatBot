@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/environment';
 import { Http, Headers } from '@angular/http';
+import { dialogflow } from './config';
 // tslint:disable-next-line:import-blacklist
 // import 'rxjs/Rx';
 import { map } from 'rxjs/operators';
@@ -15,7 +15,7 @@ export class ChatService {
     new Message('bot', 'hey my bitch')
   ];
   messagesHasBeenUpdated = new Subject<Message[]>();
-  readonly token = environment.dialogflow.demo;
+  readonly token = dialogflow.demo;
   readonly url = 'https://api.dialogflow.com/v1/query?v=20150910';
   constructor(private http: Http) { }
   // talk() {
